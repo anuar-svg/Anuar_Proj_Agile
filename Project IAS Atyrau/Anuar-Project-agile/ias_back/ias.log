@@ -1,0 +1,45 @@
+2020-09-17 09:45:25.382  INFO 3763 --- [main] com.example.iasback.IasBackApplication   : Starting IasBackApplication on admin with PID 3763 (started by adm_user in /home/adm_user/Project IAS Atyrau/ias_back)
+2020-09-17 09:45:25.388  INFO 3763 --- [main] com.example.iasback.IasBackApplication   : No active profile set, falling back to default profiles: default
+2020-09-17 09:45:27.527  INFO 3763 --- [main] o.s.c.a.ConfigurationClassPostProcessor  : Cannot enhance @Configuration bean definition 'iasBackApplication' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2020-09-17 09:45:28.392  INFO 3763 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2020-09-17 09:45:28.431  INFO 3763 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-09-17 09:45:28.432  INFO 3763 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.13
+2020-09-17 09:45:28.437  INFO 3763 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib]
+2020-09-17 09:45:28.514  INFO 3763 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/ap/v1]  : Initializing Spring embedded WebApplicationContext
+2020-09-17 09:45:28.514  INFO 3763 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2802 ms
+2020-09-17 09:45:28.646  INFO 3763 --- [main] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Starting...
+2020-09-17 09:45:29.276  INFO 3763 --- [main] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Start completed.
+2020-09-17 09:45:29.604  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2020-09-17 09:45:29.604  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2020-09-17 09:45:29.605  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2020-09-17 09:45:29.605  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2020-09-17 09:45:29.606  INFO 3763 --- [main] .s.DelegatingFilterProxyRegistrationBean : Mapping filter: 'springSecurityFilterChain' to: [/*]
+2020-09-17 09:45:29.606  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'authenticationJwtTokenFilter' to: [/*]
+2020-09-17 09:45:29.607  INFO 3763 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'logFilter' to: [/*]
+2020-09-17 09:45:29.607  INFO 3763 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2020-09-17 09:45:30.224  INFO 3763 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@32b0876c, org.springframework.security.web.context.SecurityContextPersistenceFilter@7c847072, org.springframework.security.web.header.HeaderWriterFilter@4acc5dff, org.springframework.web.filter.CorsFilter@2aaf152b, org.springframework.security.web.authentication.logout.LogoutFilter@4cb2918c, com.example.iasback.security.jwt.AuthTokenFilter@6f3e19b3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@23f86d8a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5a3a1bf9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@39bbd9e0, org.springframework.security.web.session.SessionManagementFilter@f6de586, org.springframework.security.web.access.ExceptionTranslationFilter@340a8894, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6fc6deb7]
+2020-09-17 09:45:30.230  INFO 3763 --- [main] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Starting...
+2020-09-17 09:45:30.312  INFO 3763 --- [main] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Start completed.
+2020-09-17 09:45:30.492  INFO 3763 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-09-17 09:45:31.671  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2020-09-17 09:45:31.773  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangeloglock
+2020-09-17 09:45:31.780  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT LOCKED FROM public.databasechangeloglock WHERE ID=1
+2020-09-17 09:45:31.823  INFO 3763 --- [main] l.lockservice.StandardLockService        : Successfully acquired change log lock
+2020-09-17 09:45:32.528  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT MD5SUM FROM public.databasechangelog WHERE MD5SUM IS NOT NULL LIMIT 1
+2020-09-17 09:45:32.552  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT COUNT(*) FROM public.databasechangelog
+2020-09-17 09:45:32.555  INFO 3763 --- [main] l.c.StandardChangeLogHistoryService      : Reading from public.databasechangelog
+2020-09-17 09:45:32.556  INFO 3763 --- [main] liquibase.executor.jvm.JdbcExecutor      : SELECT * FROM public.databasechangelog ORDER BY DATEEXECUTED ASC, ORDEREXECUTED ASC
+2020-09-17 09:45:32.658  INFO 3763 --- [main] l.lockservice.StandardLockService        : Successfully released change log lock
+2020-09-17 09:45:32.801  INFO 3763 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path '/ap/v1'
+2020-09-17 09:45:32.806  INFO 3763 --- [main] com.example.iasback.IasBackApplication   : Started IasBackApplication in 8.691 seconds (JVM running for 11.169)
+2020-09-17 09:48:17.598  INFO 3763 --- [http-nio-8090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/ap/v1]  : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-09-17 09:48:17.598  INFO 3763 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-09-17 09:48:17.612  INFO 3763 --- [http-nio-8090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-09-17 09:48:18.278 ERROR 3763 --- [http-nio-8090-exec-2] c.e.i.security.jwt.AuthEntryPointJwt     : Unauthorized error: Full authentication is required to access this resource
+2020-09-17 12:21:57.198 ERROR 3763 --- [http-nio-8090-exec-8] c.e.i.security.jwt.AuthEntryPointJwt     : Unauthorized error: Full authentication is required to access this resource
+2020-09-17 16:31:04.943 ERROR 3763 --- [http-nio-8090-exec-1] c.e.i.security.jwt.AuthEntryPointJwt     : Unauthorized error: Full authentication is required to access this resource
+2020-09-17 16:38:41.747  INFO 3763 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-09-17 16:38:41.749  INFO 3763 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown initiated...
+2020-09-17 16:38:41.765  INFO 3763 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown completed.
+2020-09-17 16:38:41.769  INFO 3763 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown initiated...
+2020-09-17 16:38:41.783  INFO 3763 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : SpringBootJPAHikariCP - Shutdown completed.

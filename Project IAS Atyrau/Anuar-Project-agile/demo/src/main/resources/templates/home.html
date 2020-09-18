@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+	<div th:each="d : ${demography}">
+		<span th:text="${d.year}"></span>
+		<span th:text="${d.region}"></span>
+		<span th:text="${d.fertility}"></span>
+	</div>
+	
+	<div class="container">
+	
+		<div class="row">
+			<div class="col">
+				<canvas id="FertilityChart" height="200"></canvas>
+			</div>
+			
+			<div class="col">
+				<canvas id="mortalityRateChart" height="200"></canvas>
+			</div>
+			
+			<div class="col" >
+				<canvas id="populationGrowthChart" height="200"></canvas>
+			</div>
+		</div>
+	
+		<div class="row">
+			<div class="col">
+				<canvas id="FertilityByYearsChart" height="200"></canvas>
+			</div>
+			
+			<div class="col">
+				<canvas id="MortalityByYearsChart" height="200"></canvas>
+			</div>
+
+			<div class="col">
+				<canvas id="PopGrowthByYearsChart" height="200"></canvas>
+			</div>
+			
+		</div>
+	
+	</div>
+	
+	
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+			var regions = /*[[${regions}]]*/;
+			var popGrowth = /*[[${popGrowth}]]*/;
+			var fertilities = /*[[${fertilities}]]*/;
+			var mortalities = /*[[${mortalities}]]*/;
+			var years = /*[[${years}]]*/;
+			var sumOfFertilities = /*[[${sumOfFertilities}]]*/;
+			var sumOfMortalities = /*[[${sumOfMortalities}]]*/;
+		/*]]>*/
+	</script>
+	
+	<script type="text/javascript" th:src="@{/js/populationGrowthChart.js}"></script>
+	<script type="text/javascript" th:src="@{/js/mortalityRateChart.js}"></script>
+	<script type="text/javascript" th:src="@{/js/FertilityChart.js}"></script>
+	<script type="text/javascript" th:src="@{/js/FertilityByYearsChart.js}"></script>
+	<script type="text/javascript" th:src="@{/js/MortalityByYearsChart.js}"></script>
+	
+</body>
+</html>

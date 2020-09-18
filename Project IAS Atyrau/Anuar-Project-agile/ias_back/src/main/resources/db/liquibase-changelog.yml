@@ -1,0 +1,54 @@
+databaseChangeLog:
+    - changeSet:
+        id: 1
+        author: nurbek
+        changes:
+          - sqlFile:
+              path: create_basic_tables.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+    - changeSet:
+        id: 2
+        author: nurbek
+        changes:
+          - sqlFile:
+              path: insert_category_region_source_roles.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+    - changeSet:
+        id: 3
+        author: nurbek
+        changes:
+          - sqlFile:
+              path: insert_menu_items.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+    - changeSet:
+        id: 4
+        author: nurolla
+        changes:
+          - sqlFile:
+              path: insert_dictionary.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+    - changeSet:
+        id: 5
+        author: nurolla
+        changes:
+          - sqlFile:
+              path: insert_users.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+    - changeSet:
+        id: 6
+        author: nurolla
+        changes:
+          - sqlFile:
+              path: n_s.sql
+              relativeToChangelogFile: true
+              splitStatements: false
+
+
+
+
+
